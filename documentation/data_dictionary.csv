@@ -1,0 +1,24 @@
+Table,Column,Description,Data Type,Key Type
+Customers,customer_id,Customer identifier used to connect orders,Text,Primary Key
+Customers,customer_unique_id,Identifier representing a unique customer,Text,None
+Customers,customer_city,Customer city,Text,None
+Customers,customer_state,Customer state,Text,None
+Orders,order_id,Unique order identifier,Text,Primary Key
+Orders,customer_id,Customer associated with the order,Text,Foreign Key
+Orders,order_status,Current order status,Text,None
+Orders,order_purchase_timestamp,Date and time order was placed,DateTime,None
+Orders,order_delivered_customer_date,Actual delivery date,DateTime,None
+Orders,order_estimated_delivery_date,Estimated delivery date,DateTime,None
+Order Items,order_id,Associated order,Text,Foreign Key
+Order Items,order_item_id,Item sequence within order,Integer,Composite Key
+Order Items,product_id,Associated product,Text,Foreign Key
+Order Items,price,Product selling price,Decimal,None
+Order Items,freight_value,Shipping charge,Decimal,None
+Payments,order_id,Associated order,Text,Foreign Key
+Payments,payment_type,Payment method,Text,None
+Payments,payment_installments,Number of installments,Integer,None
+Payments,payment_value,Payment amount,Decimal,None
+Products,product_id,Unique product identifier,Text,Primary Key
+Products,product_category_name,Product category in Portuguese,Text,Foreign Key
+Category Translation,product_category_name,Portuguese category name,Text,Primary Key
+Category Translation,product_category_name_english,English category name,Text,None

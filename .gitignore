@@ -1,0 +1,14 @@
+# Python and Jupyter temporary files
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Power BI temporary files
+~$*.pbix
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Original raw datasets
+data/raw/
